@@ -43,7 +43,7 @@ public class DownloadingUtil
     {
         downloadSuccess = false;
 
-        AsyncOperationHandle downloadHandle = Addressables.DownloadDependenciesAsync(key, false);
+        AsyncOperationHandle downloadHandle = Addressables.DownloadDependenciesAsync(key, true);
         downloadHandle.Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -72,10 +72,8 @@ public class DownloadingUtil
                 percentageComplete = downloadHandle.GetDownloadStatus().Percent;
 
                 OnDownload(key, percentageComplete, downloadSuccess);
-                //Debug.Log($"Downloading: {percentageComplete}");
             }
         });
-        
     }
 
     public static void ClearAddressablesDownload()
