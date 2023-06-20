@@ -1,11 +1,12 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public class Preloader : MonoBehaviour
+public class Preloader
 {
     const string preloadLabel = "preload";
 
-    async void Start()
+    public static async Task Preload()
     {
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
@@ -25,5 +26,7 @@ public class Preloader : MonoBehaviour
             Debug.Log("Downloading...");
             await DownloadingUtil.DownloadAssets(preloadLabel);
         }
+
+        Debug.Log("Preload ended...");
     }
 }

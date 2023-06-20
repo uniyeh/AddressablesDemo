@@ -45,8 +45,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1586703fd5fae584bb7e76e9ec811c12, type: 2}
   - {fileID: 11400000, guid: da8d92547cef7c444aa5cb85856e8b94, type: 2}
   - {fileID: 11400000, guid: b92b4cb150a36544e91f408514766ef7, type: 2}
+  - {fileID: 11400000, guid: eee30a2854acd8f48a904c87915149f6, type: 2}
   - {fileID: 11400000, guid: bd74ee9e54207334c9ca5bb0101daf7b, type: 2}
   - {fileID: 11400000, guid: 7cac21bf6abcbc540953ef9d9ee9b354, type: 2}
+  - {fileID: 11400000, guid: 071672b96dbf93740bc533abb88d9183, type: 2}
+  - {fileID: 11400000, guid: 453a2bbb2a080f24d9915a6f971096d5, type: 2}
+  - {fileID: 11400000, guid: 6877dc6055d29d3459f2d330dd89e3ca, type: 2}
+  - {fileID: 11400000, guid: 69a0bd799416fcc47b862ed614c65215, type: 2}
+  - {fileID: 11400000, guid: 26178d6f2696a6c43be2e14b00fa9a0a, type: 2}
+  - {fileID: 11400000, guid: 0b3412397e0054e4b8cc8de9d5409a29, type: 2}
+  - {fileID: 11400000, guid: 8ed531229460a33498fd615cb05b94e4, type: 2}
+  - {fileID: 11400000, guid: 0d97fc5e102108f48ad29d6ddca752c4, type: 2}
+  - {fileID: 11400000, guid: 4df16d2709845f043bd134ad6bd5afe0, type: 2}
+  - {fileID: 11400000, guid: 9b505b2397d16b841890d05ced772f7f, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -81,7 +92,7 @@ MonoBehaviour:
       - m_Id: c8eaaad2440473e449e3d656d1f0c0aa
         m_Value: ServerData/[BuildTarget]
       - m_Id: 1704bde504c3db64b9787a9df2c8501b
-        m_Value: https://addressables-demo-20230601.s3.ap-southeast-2.amazonaws.com/
+        m_Value: https://addressables-demo-20230601.s3.ap-southeast-2.amazonaws.com
     m_ProfileEntryNames:
     - m_Id: a81bca6b9480b124d946e63e04cbad1c
       m_Name: BuildTarget
@@ -107,6 +118,10 @@ MonoBehaviour:
     - noise
     - material
     - preload
+    - Locale
+    - Locale-zh-TW
+    - Preload
+    - Locale-en-US
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 11ad82f992e850e4696132b61936e122, type: 2}

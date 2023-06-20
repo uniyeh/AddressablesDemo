@@ -44,18 +44,17 @@ public class DownloadPanelWithProgress : MonoBehaviour
         downloadMB = 0;
 
         Addressables.InitializeAsync();
-        bool downloadable = await UpdateSizeInfo();
 
+        bool downloadable = await UpdateSizeInfo();
+        downloadBtn.interactable = downloadable;
         if (downloadable)
         {
-            downloadBtn.interactable = true;
             downloadBtn.onClick.AddListener(DownloadAssets);
         }
         else
         {
-            downloadBtn.interactable = false;
-            downloadBtn.GetComponentInChildren<TextMeshProUGUI>().text = "No download needed";
-            Debug.Log("No need to download.");
+            downloadBtn.GetComponentInChildren<TextMeshProUGUI>().text = "Download process unenabled";
+            Debug.Log("Download process will not be invoke.");
         }
     }
 
@@ -78,10 +77,22 @@ public class DownloadPanelWithProgress : MonoBehaviour
     async Task<bool> UpdateSizeInfo()
     {
         long downloadBytes = await DownloadingUtil.GetKeyDownloadSizeSync(assetRef);
-        downloadMB = ConvertBytesToMB(downloadBytes);
+        bool enoughSpace = false;
+
+        if (downloadBytes <= 0)
+        {
+            downloadBytes = 0;
+            Debug.Log("No need for download...");
+        }
+        else
+        {
+            enoughSpace = DownloadingUtil.CheckIfEnoughSpaceToDownload(downloadBytes);
+            downloadMB = ConvertBytesToMB(downloadBytes);
+        }
+
         sizeInfo.text = $"Size: {downloadMB}MB";
 
-        return downloadMB > 0;
+        return downloadMB > 0 && enoughSpace;
     }
 
     float ConvertBytesToMB(long bytes)

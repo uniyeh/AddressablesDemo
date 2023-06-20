@@ -19,6 +19,9 @@ public class SpritesLoaderAndSwitcher : MonoBehaviour
     void Start()
     {
         btn = this.GetComponent<Button>();
+        if (btn == null)
+            return;
+
         btn.onClick.AddListener(RandomSwtichSprites);
         btn.interactable = false;
 

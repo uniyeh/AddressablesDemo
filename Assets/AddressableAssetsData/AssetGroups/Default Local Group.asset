@@ -27,6 +27,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - preload
+  - m_GUID: 8393d7d6eb030dc4b9b98629946740c9
+    m_Address: Assets/Prefabs/LoacalizationController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4da5406bcf4d6c74bab883b227db9cc2, type: 2}
   m_SchemaSet:

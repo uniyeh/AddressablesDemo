@@ -33,6 +33,10 @@ MonoBehaviour:
     m_Address: BasicLoadingExamples
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: da05099e915ad2b478e4b81ed01bcf0f
+    m_Address: Home
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4da5406bcf4d6c74bab883b227db9cc2, type: 2}
   m_SchemaSet:

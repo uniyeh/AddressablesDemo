@@ -14,6 +14,8 @@ public class SpriteLoader : MonoBehaviour
     void Start()
     {
         img = this.GetComponent<Image>();
+        if (img == null)
+            return;
 
         // Load by address
         spriteHandle = Addressables.LoadAssetAsync<Sprite>(spriteAddress);
@@ -35,8 +37,11 @@ public class SpriteLoader : MonoBehaviour
     // Release handle when destroyed
     void OnDestroy()
     {
-        Addressables.Release(spriteHandle);
-        Debug.Log("Sprites handle released");
+        if (spriteHandle.IsValid())
+        {
+            Addressables.Release(spriteHandle);
+            Debug.Log("Sprites handle released");
+        }
     }
 }
 
